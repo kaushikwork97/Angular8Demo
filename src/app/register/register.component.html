@@ -1,0 +1,28 @@
+<section class="user_account">
+    <div class="login_page">
+        <img width="60" alt="Exchange Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+        <h1>Register</h1>
+        <form>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Email Address</mat-label>
+                <input matInput placeholder="you@example.com" required>
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="•••••••••">
+                <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput placeholder="•••••••••" required>
+                <mat-icon matSuffix>vpn_key</mat-icon>
+            </mat-form-field>
+            <mat-checkbox>I have read and agree to the <a href="#">Terms of Use</a></mat-checkbox>
+            <button mat-raised-button color="primary" ngClass="w-100 btn_lg"  routerLink="/exchange">Register</button>
+        </form>
+    </div>
+    <div class="user_account_bottom">
+        <span>Already Registered? <a routerLink="/login">Login</a></span>
+    </div>
+</section>

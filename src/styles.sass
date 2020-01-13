@@ -1,0 +1,322 @@
+/*defult start*/
+body
+    font-family: 'Roboto', sans-serif !important
+    font-size: 14px !important
+    color: #5f6368 !important
+
+$theme_color: #3f51b5
+$dark_color: #0b1c33
+$sell_color: #ff007a
+$buy_color: #00c087
+
+.sell_color
+    color: $sell_color !important
+.buy_color
+    color: $buy_color !important
+
+.buy_button
+    background-color: $buy_color !important
+    color: white !important
+
+.sell_button
+    background-color: $sell_color !important
+    color: white !important
+
+
+app-root
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+
+.content
+    flex: 1
+
+footer
+    background-color: $dark_color
+    text-align: center
+    color: white
+    padding: 10px
+    font-size: 14px
+
+.container
+    max-width: 1500px !important
+
+.btn_lg
+    padding: 0.3rem 2rem !important
+    font-size: 1rem !important
+
+.mat-form-field-wrapper
+    margin: 0 !important
+
+.mat-card
+    background-color: white
+    position: relative
+    z-index: 1
+    border: 1px solid #eee
+    box-shadow: none !important
+
+.mat-card-title
+    padding: 0.6rem
+    border-bottom: 1px solid #eee
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: #f7f7f7
+    h4
+        margin: 0
+        font-size: 1rem
+        text-transform: uppercase
+        color: $theme_color
+    .right
+        font-size: 0.9rem
+
+table
+    width: 100%
+
+    tbody
+        background-color: white !important
+
+    tr.mat-header-row,
+    tr.mat-row
+        height: 26px
+
+.mat-row
+    &:nth-child(odd)
+        background-color: #f7f7f7
+
+td.mat-cell
+    border-color: #eeeeee !important
+
+table td.mat-cell:last-of-type,
+table td.mat-footer-cell:last-of-type,
+table th.mat-header-cell:last-of-type
+    padding-right: 10px
+
+table td.mat-cell:first-of-type,
+table td.mat-footer-cell:first-of-type,
+table th.mat-header-cell:first-of-type
+    padding-left: 10px
+
+/*defult end*/
+    
+/*navbar start*/
+.navbar
+    background-color: $dark_color
+    margin-bottom: 1rem
+    box-shadow: 0 0 10px rgba(63, 81, 181, 0.8)
+
+    span
+        color: white
+        font-weight: normal
+
+    nav
+        button
+            &:hover,
+            &.active
+                background-color: rgba(255, 255, 255, 0.1)
+
+/*navbar end*/
+
+
+/*homepage start*/
+.banner
+    background-color: $dark_color
+    padding: 10rem 0
+    text-align: center
+    color: white
+    position: relative
+    height: calc(100vh - 96px)
+    display: flex
+    align-items: center
+
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-image: url(assets\banner_bg.gif)
+        opacity: 0.5
+        background-size: contain
+        background-position: center
+        z-index: 0
+        mix-blend-mode: color-dodge
+
+.banner_cont
+    position: relative
+    z-index: 1
+
+    h1
+        font-weight: 900
+        font-size: 4rem
+    p
+        max-width: 800px
+        margin: 2rem auto
+        font-size: 1.5rem
+        font-weight: 300
+
+/*homepage end*/
+
+
+/*login start*/
+.login_page
+    padding: 2rem
+    max-width: 500px
+    width: 100%
+    background-color: white
+    border-radius: 10px
+    border: 1px solid #dadce0
+
+.user_account
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    min-height: 100vh
+
+    img
+        margin: 0 auto 1rem
+        display: table
+
+    h1
+        text-align: center
+        color: black
+        font-size: 1.3rem
+        text-transform: uppercase
+        margin-bottom: 1.3rem
+
+    .mat-checkbox
+        margin-bottom: 0.5rem
+        display: inline-block
+
+        a
+            color: $theme_color
+
+.user_account_bottom
+    margin-top: 1rem
+
+    a
+        color: $theme_color
+
+.for_pass
+    text-align: right
+    margin-bottom: 1.2rem
+
+    a
+        color: $theme_color
+    
+/*login end*/  
+
+/*orderbook*/
+.bs_order
+    .row
+        margin: 0
+
+    .col-md-6
+        padding: 0
+
+.b_order
+    td,
+    th
+        &:last-of-type
+            text-align: right
+            position: relative
+    
+    .depthBar
+        background-color: $buy_color
+        opacity: 0.2
+
+.s_order
+    td,
+    th
+        &:first-of-type
+            position: relative
+        &:last-of-type
+            text-align: right
+
+    .depthBar
+        background-color: $sell_color
+        opacity: 0.2
+        left: 0
+
+.bs_order_height
+    height: 331px
+
+.depthBar
+    width: 80%
+    height: 26px
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 0
+    transition: all 0.5s 0s
+
+.bs_price
+    display: flex
+    align-items: center
+    font-size: 1.3rem
+    line-height: normal
+/*orderbook end*/
+
+/*buy sell form*/
+.bs_form
+    .mat-card-content
+        padding: 1rem
+
+    button
+        width: 100%
+/*buy sell form*/
+
+/*chart start*/
+.chart
+    height: 460px
+/*chart end*/
+
+/*market*/
+.market
+    .mat-form-field
+        margin: -10px 0 -30px
+
+.market_order
+    height: 361px
+/*market*/
+
+
+/*volume*/
+.volume
+    list-style: none
+    display: flex
+    align-items: center
+    justify-content: space-between
+    text-align: center
+    border: 1px solid #eee
+    padding: 0.5rem
+    background-color: white
+    b
+        display: block
+        font-size: 1rem
+    li
+        width: 100%
+        border-right: 1px solid #eee
+        font-size: 12px
+        &:last-of-type
+            border: 0
+/*volume*/
+
+/*trade history start*/
+.trade_history
+    height: 819px
+/*trade history end*/
+
+/*order history start*/
+.order_history
+    height: 210px
+/*order history end*/
+
+
+/*grid stack*/
+.grid-stack
+    margin: 0 -10px 1rem -10px
+
+
